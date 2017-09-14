@@ -1,11 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default (props) => {
     return(
         <div className="banner-content">
             <div className="container center">
-            <h1>I Design &amp; Develop Web <span className="line-break">Apps &amp; Websites</span></h1>
-            <a href="" className="btn">View My Work</a>
+            <h1>I Develop Web Apps<span className="line-break"> &amp; Websites</span></h1>
+            <Link to="/portfolio" className="btn">My Work</Link>
             
             <div className="sub-links">
             <p>Or view my code:</p>

@@ -11,6 +11,7 @@ html {
 }
 body {
   color: #515151;
+  background: #f1f1f1;
 }
 /* Reset */
 h1,h2,h3,h4,h5,h6 {
@@ -68,8 +69,7 @@ a:hover:after {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  padding: 10px;
-  border-radius: 2px;
+  
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   transition: all ease-out .2s;
   display: inline-block;
@@ -98,44 +98,7 @@ transform: translateY(2px);
 
 
 }
-@media only screen and (min-width : 768px) {
-  .row {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-  }
-}
 
-.container {
-  padding: 10px;
-  width: 100%;
-  margin: auto;
-}
-@media only screen and (min-width : 400px) {
-  html {
-    font-size: 16px;
-  }
-}
-@media only screen and (min-width : 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media only screen and (min-width : 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media only screen and (min-width : 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media only screen and (min-width : 1200px) {
-  .container {
-    max-width: 1170px;
-  }
-}
 
 
 /* mobile header styles */
@@ -143,8 +106,8 @@ transform: translateY(2px);
 header {
   /* width: 350px;
   height: 140px; */
-  text-align: center;
-  padding: 15px 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: #313131;
   color: #ffffff;
   /* 
@@ -152,56 +115,46 @@ header {
   top: 0;
   left: 0 */
 }
-header h2 {
-  margin-bottom: 5px;
-}
+
 
 .name, .title {
   display: block;
 }
 .name {
   font-size: 1.75rem;
-  font-weight: 800;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 1.25rem;
 }
 .title {
   font-weight: 600;
-  margin-bottom: 10px;
 }
 
-header a {
-  
-  text-decoration: none;
-  
+header a {  
+  text-decoration: none;  
 }
 
 
 /* test */
 body {
-  
-  overflow-x: hidden;
+
   max-width: 100%;
   width: 100%;
 }
 
 /* tablet header-styles */
 
-@media only screen and (min-width : 768px) {
-  header {
-    text-align: left;
-    padding-bottom: 160px;
-  }
-}
 
 /* Banner styles */
 .banner {
   text-align: center;
   
-  z-index: 10;
+
 }
 .banner-content {
   
   text-align: center;
-  z-index: 11;
+
 }
 .banner-content .btn {
   margin-top: 20px;
@@ -215,7 +168,7 @@ body {
   margin-bottom: 5px;
 }
 .skills-wrapper .header{
-  padding-top: 20px;
+
   position: relative;
 }
 
@@ -226,28 +179,30 @@ body {
   padding-bottom: 10px;
 }
 
+header .row {
+  margin-bottom: 0;
+}
+
 /* Banner tablet styles */ 
 @media only screen and (min-width : 768px) {
+  body {
+    font-size: 16px;
+  }
   .banner {
-    padding: 10px 0;
+    
     background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
-    width: 120%;
-    height: 500px;
-    position: absolute;
-    left:0;
-    top: 160px;
-    transform-origin: bottom left;
-    transform:rotate(-4deg);
+    
+   
   }
   .banner-content{
-    padding-top: 0;
-    background-image: none;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .line-break {
     display: block;
   }
   .skills-wrapper .header {
-    padding-top: 150px;
+
     
     position: relative;
   }
@@ -257,4 +212,75 @@ body {
 
 @media only screen and (min-width : 992px) {
  
+}
+
+/* Loading animation */
+.loading {
+  height: calc(100vh - 81px);
+  width: 100%;
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+
+} 
+.loading .container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+  
+}
+.section-one {  
+  font-size: 40px;
+  width: 0;
+  overflow: hidden;
+}
+
+@keyframes section {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes sectionTwo {
+  from{
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+.section-one {
+  animation-name: section;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+.about {
+ 
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+.about h5 span {
+  font-weight: 500;
+  font-size: .9em;
+  color: #515151;
+  display: block;
+}
+.about h4 {
+  margin-bottom: 0;
+  color: #7B3FFC;
+}
+.about h5 {
+ 
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.about h6 {
+  font-weight: 400;
+  margin-top: 0;
+}
+.about .row {
+  margin-bottom: 0;
 }
