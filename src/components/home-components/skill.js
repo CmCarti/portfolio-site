@@ -1,12 +1,13 @@
 import React from 'react';
 
 export default (props) => {
+    // Map over the skills from the database
     const skills = props.skills.map((skill) =>{
         return (
-            <li>{skill}</li>
+            <li key={skill}>{skill}</li>
         )
     }
-    )
+    );
     return(
             <div className="skill-category">
                         <h3 className="skill-title">
