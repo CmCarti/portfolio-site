@@ -91,7 +91,20 @@ transform: translateY(2px);
   text-align: center;
   
 }
+.col {
 
+}
+.row {
+
+
+}
+@media only screen and (min-width : 768px) {
+  .row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}
 
 .container {
   padding: 10px;
@@ -165,7 +178,7 @@ header a {
 /* test */
 body {
   
-  overflow: hidden;
+  overflow-x: hidden;
   max-width: 100%;
   width: 100%;
 }
