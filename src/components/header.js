@@ -10,7 +10,7 @@ export default (props) => {
                         <span className="name">Chad Cartier</span>
                     <span className="title">Front End Developer</span>
                         </div>
-                        <div className="col s6 right-align"> <Link to="/" className="nav-link">Home</Link> | <Link to="/portfolio" className="nav-link">Portfolio</Link></div>
+                        <div className="col s6 right-align"> <Link to="/" className="nav-link">Home</Link> | <Link to="/portfolio" className="nav-link">Portfolio</Link> | <Link to="/blog" className="nav-link">Blog</Link></div>
                     </div>
                     
                 </div>
